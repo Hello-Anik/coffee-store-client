@@ -15,6 +15,7 @@ import Signin from './components/Signin.jsx';
 import Signup from './components/Signup.jsx';
 import AuthProvider from './Context/AuthProvider.jsx';
 import Users from './components/Users.jsx';
+import Update from './components/Update.jsx';
 
 const router = createBrowserRouter([
   {
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
       path : 'users',
       Component : Users,
       loader : () => fetch('http://localhost:5000/users')
+    },
+    {
+      path : "update/:id",
+      Component : Update,
     }
     
     ]
